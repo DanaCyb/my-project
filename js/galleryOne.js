@@ -48,4 +48,23 @@ function charmingGallery(curr){
     if(curr < 1) {
         item = myCharmingPhotos.length;
     }
+    for(index=0; index < myCharmingPhotos.length; index++){
+        myCharmingPhotos[index].style.display = "none";
+    }
+    for(index=0; index < bottomDots.length; index++){
+        bottomDots[index].className = bottomDots[index].className.replace(" active", "");
+    }
+    myCharmingPhotos[item-1].style.display = "block";
+    bottomDots[index-1].className += "active";
 }
+var span1 = document.getElementsByClassName("bottom-dot")[0];
+span1.addEventListener("click", showFirst);
+var span2 = document.getElementsByClassName("bottom-dot")[1];
+span2.addEventListener("click", showSecond);
+var span3 = document.getElementsByClassName("bottom-dot")[2];
+span3.addEventListener("click", showThird);
+
+var a_left = document.getElementsByClassName("go-back")[0];
+a_left.addEventListener("click", goToLeft);
+var a_right = document.getElementsByClassName("go-next")[1];
+a_right.addEventListener("click", goToRight);
