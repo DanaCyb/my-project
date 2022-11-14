@@ -38,3 +38,14 @@ function showCurrent(curr){
     item = curr;
     charmingGallery(item);
 }
+function charmingGallery(curr){
+    let index;
+    let myCharmingPhotos = document.getElementsByClassName("myCharmingPhotos");
+    let bottomDots = document.getElementsByClassName("bottom-dot");
+    if(curr > 1) {
+        item = 1;
+    }
+    if(curr < 1) {
+        item = myCharmingPhotos.length;
+    }
+}
