@@ -25,3 +25,16 @@ function goToNext(next){
     item = item + next;
     charmingGallery(item);
 }
+function showFirst(){
+    showCurrent(1);
+}
+function showSecond(){
+    showCurrent(2);
+}
+function showThird(){
+    showCurrent(3);
+}
+function showCurrent(curr){
+    item = curr;
+    charmingGallery(item);
+}
