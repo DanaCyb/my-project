@@ -59,3 +59,22 @@ function displayImage(){
         display.classList.remove("change-image");
     },1000);
 }
+function displayTitle(){
+    var currentTitle = images[index].title;
+    title.innerHTML = " ";
+    setTimeout(function(){
+        title.innerHTML = currentTitle;
+    },800);
+}
+nxtBtn.addEventListener("click", function(){
+    next();
+    displayImage();
+    displayTitle();
+});
+prevBtn.addEventListener("click", function(){
+    prev();
+    displayImage();
+    displayTitle();
+});
+displayImage();
+displayTitle();
