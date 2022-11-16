@@ -48,3 +48,14 @@ function prev(){
     }
     return index;
 }
+function displayImage(){
+    var currentImage = images[index].url;
+    display.className.add("change-image");
+    setTimeout(function(){
+        display.style.backgroundImage = "url('"+currentImage+"')"
+
+    },500);
+    setTimeout(function(){
+        display.classList.remove("change-image");
+    },1000);
+}
