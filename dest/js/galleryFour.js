@@ -1,6 +1,6 @@
-const current = document.querySelector("#current");
-const imgs = document.querySelector(".imgs");
-const img = document.querySelector(".imgs img");
+const current = document.querySelector('#current');
+const imgs = document.querySelector('.imgs');
+const img = document.querySelector('.imgs img');
 const opacity = 0.6;
 img[0].style.opacity = opacity;
 
