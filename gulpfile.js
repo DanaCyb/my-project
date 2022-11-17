@@ -11,11 +11,11 @@ function streamHtml(){
     .pipe(dest('dest'));
 }
 function streamSass(){
-    return src('css/style.css')
+    return src('css/style.sass')
     .pipe(
         sass({
-            outputStyle : "compressed"
-        }),on('error', sass.logError)
+            outputStyle: "compressed"
+        }).on('error', sass.logError)
     )
     .pipe(dest('dest/css'));
 } 
