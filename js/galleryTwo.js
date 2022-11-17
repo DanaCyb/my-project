@@ -36,10 +36,10 @@ function showGalleryTwo(n){
     let dots = document.getElementsByClassName("demo");
     let captionText = document.getElementById("caption");
     if(n > slides.length) {
-        item2 = 1;
+        item2 = 1
     }
     if(n < 1){
-        item2 = slides.length;
+        item2 = slides.length
     }
     for(i = 0; i < slides.length; i++){
         slides[i].style.display = "none";

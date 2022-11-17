@@ -3,7 +3,7 @@ var title = document.querySelector(".photo-title");
 var nxtBtn = document.querySelector(".next-btn");
 var prevBtn = document.querySelector(".prev-btn");
 
-var index =0;
+var index = 0;
 var images = [
     {
         title: "Woman 1",
@@ -29,9 +29,7 @@ var images = [
         title: "Woman 6",
         url: 'images/woman 6.png'
     }
-
 ];
-
 function next(){
     if(index === images.length-1){
         index = 0;
@@ -52,8 +50,7 @@ function displayImage(){
     var currentImage = images[index].url;
     display.className.add("change-image");
     setTimeout(function(){
-        display.style.backgroundImage = "url('"+currentImage+"')"
-
+        display.style.backgroundImage = "url('"+currentImage+"')";
     },500);
     setTimeout(function(){
         display.classList.remove("change-image");
@@ -61,9 +58,9 @@ function displayImage(){
 }
 function displayTitle(){
     var currentTitle = images[index].title;
-    title.innerHTML = " ";
+    title.innerText = " ";
     setTimeout(function(){
-        title.innerHTML = currentTitle;
+        title.innerText = currentTitle;
     },800);
 }
 nxtBtn.addEventListener("click", function(){
@@ -76,5 +73,6 @@ prevBtn.addEventListener("click", function(){
     displayImage();
     displayTitle();
 });
+
 displayImage();
 displayTitle();
