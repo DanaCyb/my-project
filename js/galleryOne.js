@@ -11,10 +11,11 @@ function openPage(pageName,elemt,color){
     document.getElementById(pageName).style.display = "block";
     elemt.style.backgroundColor = color;
 }
-document.getElementById("defaultOpen").click();
+document.getElementById('galleryOne').click();
 
 let item = 1;
 charmingGallery(item);
+
 function goToRight(){
     goToNext(1);
 }
