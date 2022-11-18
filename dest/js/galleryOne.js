@@ -27,13 +27,13 @@ function goToNext(next){
     charmingGallery(item);
 }
 function showFirst(){
-    showCurrent(1);
+    showCurrent(0);
 }
 function showSecond(){
-    showCurrent(2);
+    showCurrent(1);
 }
 function showThird(){
-    showCurrent(3);
+    showCurrent(2);
 }
 function showCurrent(curr){
     item = curr;
