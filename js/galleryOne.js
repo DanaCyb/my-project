@@ -11,10 +11,11 @@ function openPage(pageName,elemt,color){
     document.getElementById(pageName).style.display = "block";
     elemt.style.backgroundColor = color;
 }
-document.getElementById("defaultOpen").click();
+document.getElementById('galleryOne').click();
 
 let item = 1;
 charmingGallery(item);
+
 function goToRight(){
     goToNext(1);
 }
@@ -26,18 +27,19 @@ function goToNext(next){
     charmingGallery(item);
 }
 function showFirst(){
-    showCurrent(1);
+    showCurrent(0);
 }
 function showSecond(){
-    showCurrent(2);
+    showCurrent(1);
 }
 function showThird(){
-    showCurrent(3);
+    showCurrent(2);
 }
 function showCurrent(curr){
     item = curr;
     charmingGallery(item);
 }
+
 function charmingGallery(curr){
     let index;
     let myCharmingPhotos = document.getElementsByClassName("myCharmingPhotos");
@@ -68,3 +70,33 @@ var a_left = document.getElementsByClassName("go-back")[0];
 a_left.addEventListener("click", goToLeft);
 var a_right = document.getElementsByClassName("go-next")[1];
 a_right.addEventListener("click", goToRight);
+
+/*
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function charmingGallery(n) {
+  var i;
+  var slides = document.getElementsByClassName("myCharmingPhotos");
+  var dots = document.getElementsByClassName("bottom-dot");
+
+
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length} ;
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}*/
