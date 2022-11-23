@@ -1,7 +1,7 @@
-var display = document.querySelector(".img-display");
-var title = document.querySelector(".photo-title");
-var nxtBtn = document.querySelector(".next-btn");
-var prevBtn = document.querySelector(".prev-btn");
+var display = document.querySelector("img-display");
+var title = document.querySelector("photo-title");
+var nxtBtn = document.querySelector("next-btn");
+var prevBtn = document.querySelector("prev-btn");
 
 var index = 0;
 var images = [
